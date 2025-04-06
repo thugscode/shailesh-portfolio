@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Shailesh Kumar Sharma - Blockchain Developer & Cryptography Researcher">
+    <title>Shailesh Kumar Sharma - Blockchain & Cryptography Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="background-elements">
+        <canvas id="blockchainCanvas"></canvas>
+        <div class="crypto-symbols"></div>
+        <div class="blockchain-nodes"></div>
+        <div class="particles-bg"></div>
+        <div class="binary-rain"></div>
+        <div class="encryption-grid"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#teaching">Teaching Assistant</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container">
+                <div class="profile-container">
+                    <img src="profile.jpg" alt="Shailesh Kumar Sharma" class="profile-image">
+                </div>
+                <div class="hero-content">
+                    <h1>Shailesh Kumar Sharma</h1>
+                    <h2>Blockchain Developer & Cryptography Researcher</h2>
+                    <p class="student-info">2nd Year Master of Science Student</p>
+                    <p class="department-info">Computer Science and Engineering, IIT Kharagpur</p>
+                    
+                    <div class="specializations">
+                        <span class="spec-item">
+                            <i class="fas fa-mask"></i>
+                            Zero-Knowledge Proofs
+                        </span>
+                        <span class="spec-item">
+                            <i class="fas fa-cube"></i>
+                            Blockchain
+                        </span>
+                        <span class="spec-item">
+                            <i class="fas fa-key"></i>
+                            Cryptography
+                        </span>
+                        <span class="spec-item">
+                            <i class="fas fa-shield-alt"></i>
+                            Network Security
+                        </span>
+                    </div>
+
+                    <div class="contact-info">
+                        <a href="mailto:shaileshksharma12@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                            shaileshksharma12@gmail.com
+                        </a>
+                        <a href="tel:+918887616978">
+                            <i class="fas fa-phone"></i>
+                            +91-8887616978
+                        </a>
+                        <a href="https://www.linkedin.com/in/shailesh-kumar-sharma-747076183" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/thugscode" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <p>
+                        I am a passionate Computer Science researcher and developer specializing in blockchain technology, cryptography, and network security. Currently pursuing my Master's degree at the prestigious Indian Institute of Technology Kharagpur, I am a member of the <a href="https://ubinet-iitkgp.github.io/ubinet/index.html" target="_blank" rel="noopener noreferrer">Ubiquitous Networked Systems Lab (UbiNet)</a>, where we push the boundaries of security, privacy, and systems research to create innovative solutions for real-world challenges.
+                    </p>
+                    <p>
+                        As a Junior Research Fellow at SRIC, IIT KGP, and part of the UbiNet research group, I'm working on groundbreaking research in decentralized ride-sharing and secure WiFi authentication using blockchain and Zero-Knowledge Proofs. My work at UbiNet aims to revolutionize how we approach privacy and security in everyday digital interactions, particularly in ubiquitous and networked systems.
+                    </p>
+                    <p>
+                        With over 3 years of industry experience at companies like Sandvine Technologies and ClearTrail Technologies, I've developed extensive expertise in network security, deep packet inspection, and system optimization. My background includes developing sophisticated tools for network analysis, implementing security protocols, and building scalable backend systems.
+                    </p>
+                    <p>
+                        I'm also an active competitive programmer with a 3-star rating on CodeChef and contribute to the academic community as a Teaching Assistant for fundamental computer science courses. My research interests include:
+                    </p>
+                    <ul class="interest-list">
+                        <li>Blockchain Technology and Decentralized Systems</li>
+                        <li>Zero-Knowledge Proofs and Privacy-Preserving Protocols</li>
+                        <li>Network Security and Deep Packet Inspection</li>
+                        <li>Ubiquitous Computing and Sensing Systems</li>
+                        <li>Distributed Systems and Peer-to-Peer Networks</li>
+                        <li>Algorithm Design and Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="education-cards">
+                    <article class="education-card">
+                        <h3>MS in Computer Science</h3>
+                        <h4>Indian Institute of Technology, Kharagpur</h4>
+                        <p>2024-2026 | CPI: 8.0/10.0</p>
+                    </article>
+                    <article class="education-card">
+                        <h3>B.Tech in Computer Science</h3>
+                        <h4>Uttarakhand Technical University, Dehradun</h4>
+                        <p>2021 | Percentage: 73.8%</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications">
+            <div class="container">
+                <h2>Publications</h2>
+                <div class="publications-cards">
+                    <article class="publication-card">
+                        <h3>DeRide: An Incentivized Peer-to-Peer Ride Sharing Service using Permissioned Blockchain Networks</h3>
+                        <div class="authors">
+                            <span class="author">Shailesh Kumar Sharma</span>
+                            <span class="author">Sandip Chakraborty</span>
+                            <span class="author">Balaji Palanisamy</span>
+                            <span class="author">Shamik Sural</span>
+                        </div>
+                        <p class="conference-info">IEEE International Conference on Web Services (ICWS) 2025</p>
+                        <span class="status">Under Review</span>
+                        <p class="abstract">
+                            Most of the existing ride sharing services operate on centralized platforms that control pricing, monopolize user data and lack transparency, leading to unfair market dominance. In this paper, we propose DeRide, a decentralized ride sharing scheme built on top of a permissioned blockchain, namely Hyperledger Fabric (HLF), which enables direct peer-to-peer interactions. It promotes transparent and equitable distribution of benefits, thus addressing the shortcomings of centralized systems. DeRide works with a non-monetary token-based model, where users earn tokens by offering to drive but need to spend the same for enjoying a ride. Such a non-monetary incentivization mechanism ensures fair participation from all users. Given a set of drivers and riders, along with their travel locations, assigning maximum number of riders to drivers is framed as as an optimization problem under the constraints that each driver has a certain number of available seats, and would be willing to deviate only up to a maximum distance from its intended travel path for picking up riders. The riders must have enough tokens to their credit for enjoying the ride. The problem being NP-complete, we propose a heuristic solution for the same. The algorithm has been implemented as HLF chaincodes to support verifiability of token accounting and is integrated with Google Map for a Point-and-Select location service. An extensive set of experiments show the viability of DeRide in a realistic scenario.
+                        </p>
+                        <div class="keywords">
+                            <span class="keyword">Decentralization</span>
+                            <span class="keyword">Ride-Sharing</span>
+                            <span class="keyword">Hyperledger Fabric</span>
+                            <span class="keyword">Ride Optimization</span>
+                            <span class="keyword">Credit-Based System</span>
+                            <span class="keyword">Web Services</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <div class="container">
+                <h2>Work Experience</h2>
+                <div class="experience-cards">
+                    <!-- SRIC, IIT KGP -->
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <h3>SRIC, IIT KGP</h3>
+                            <h4>Junior Research Fellow</h4>
+                            <span class="duration">Sep 2023 − Present</span>
+                            <span class="location">Kharagpur, India</span>
+                        </div>
+                        
+                        <ul>
+                            <li>Research focused on decentralized rider-sharing problem and secure WiFi Hotspot sharing using Blockchain & Zero-Knowledge Proofs.</li>
+                            <li>Designing a secure and trustless WiFi authentication system using blockchain and ZKP, eliminating the need to share passwords.</li>
+                            <li>Implementing ZKP-based authentication to verify users without revealing credentials, ensuring privacy-preserving access control.</li>
+                        </ul>
+                    </div>
+
+                    <!-- ClearTrail Technologies -->
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <h3>ClearTrail Technologies</h3>
+                            <h4>Software Engineer</h4>
+                            <span class="duration">Mar 2023 − July 2023</span>
+                            <span class="location">Indore, India</span>
+                        </div>
+                        <ul>
+                            <li>Led the development of a Data processor for intercepted network data to identify AAA and IP addresses for Fingerprinting and Foot-printing.</li>
+                            <li>Used Networking Tools, DevOps Tools, C/C++, Python, Java for custom DPI, Golang, and Kafka.</li>
+                            <li>Monitored network traffic using DPI technology to identify and analyze data packets for security threats, performance issues, and compliance with network policies.</li>
+                            <li>Implemented DPI to detect and mitigate security threats, such as malware, intrusions, and data leakage, by inspecting and filtering packets.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Sandvine Technologies -->
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <h3>Sandvine Technologies</h3>
+                            <h4>Software Engineer II</h4>
+                            <span class="duration">April 2022 − Dec 2023</span>
+                            <span class="location">Bangalore, India</span>
+                        </div>
+                        <ul>
+                            <li>Worked at a network intelligence and application company that provides products and services to help customers manage their networks through App QoE and Network policy control.</li>
+                            <li>Worked on Sandvine's Packet-Logic Real-time Enforcement (PRE) deep packet inspection engine and its custom Linux distribution, Packet-Logic Distribution.</li>
+                            <li>Developed a tool/script to verify optimal configuration and tuning of the Policy Traffic Switch and Traffic Steering Engine in KVM hypervisor virtual machines.</li>
+                            <li>Conducted functional testing for the dynamic shaper feature to customize subscriber policies and created Python unit tests for complete feature coverage.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Innovaccer Analytics -->
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <h3>Innovaccer Analytics</h3>
+                            <h4>Associate Software Engineer</h4>
+                            <span class="duration">Sep 2021 − April 2022</span>
+                            <span class="location">Noida, India</span>
+                        </div>
+                        <ul>
+                            <li>Developed and maintained backend components for healthcare software applications, focusing on performance optimization and scalability.</li>
+                            <li>Built and deployed Health Care solutions as APIs to various clients using AWS services.</li>
+                            <li>Developed, optimized, and maintained database structures, queries, and indexing for efficient data storage and retrieval.</li>
+                            <li>Worked on Django, Nodejs, Unit Testing, Rest API, Ansible, K8s and AWS.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Dolat Capital Market -->
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <h3>Dolat Capital Market</h3>
+                            <h4>Software Developer (C++), Intern</h4>
+                            <span class="duration">June 2021 − Sep 2021</span>
+                            <span class="location">Mumbai, India</span>
+                        </div>
+                        <ul>
+                            <li>Worked as an Analyst with Development Team 2 for NSE, BSE, NCDEX, and MCX Strategy.</li>
+                            <li>To enhance the virtual experience, participated in fun online competitions involving programming questions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="project-cards">
+                    <article class="project-card">
+                        <h3>DeRide: Decentralized Ride Sharing Platform</h3>
+                        <p>A peer-to-peer ridesharing service using Hyperledger Fabric blockchain with token-based incentivization.</p>
+                        <ul>
+                            <li>Implemented token-based incentivization mechanism</li>
+                            <li>Developed smart contracts for ride matching and payments</li>
+                            <li>Integrated with Google Maps for location services</li>
+                        </ul>
+                        <div class="project-badges">
+                            <span class="project-badge"><i class="fas fa-link"></i> Hyperledger Fabric</span>
+                            <span class="project-badge"><i class="fas fa-file-contract"></i> Smart Contracts</span>
+                            <span class="project-badge"><i class="fas fa-map-marked-alt"></i> Google Maps API</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>Decentralized Student Support Platform</h3>
+                        <p>Ethereum-based platform connecting students using smart contracts and ML algorithms.</p>
+                        <ul>
+                            <li>Developed smart contracts for student matching</li>
+                            <li>Implemented ML algorithms for performance clustering</li>
+                            <li>Created peer-to-peer support system</li>
+                        </ul>
+                        <div class="project-badges">
+                            <span class="project-badge"><i class="fab fa-ethereum"></i> Ethereum</span>
+                            <span class="project-badge"><i class="fas fa-file-contract"></i> Smart Contracts</span>
+                            <span class="project-badge"><i class="fas fa-brain"></i> Machine Learning</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>Smart Question Repository</h3>
+                        <p>Secure question paper management system with automated generation capabilities.</p>
+                        <ul>
+                            <li>Built secure backend using Node.js and MongoDB</li>
+                            <li>Implemented dynamic parameter configuration</li>
+                            <li>Created automated paper generation system</li>
+                        </ul>
+                        <div class="project-badges">
+                            <span class="project-badge"><i class="fab fa-node-js"></i> Node.js</span>
+                            <span class="project-badge"><i class="fas fa-database"></i> MongoDB</span>
+                            <span class="project-badge"><i class="fab fa-git-alt"></i> Git</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>PCAP File Analyzer</h3>
+                        <p>Network traffic analysis tool with automated processing capabilities.</p>
+                        <ul>
+                            <li>Developed C++ application for PCAP parsing</li>
+                            <li>Implemented real-time traffic analysis</li>
+                            <li>Created automated folder monitoring system</li>
+                        </ul>
+                        <div class="project-badges">
+                            <span class="project-badge">C++</span>
+                            <span class="project-badge"><i class="fas fa-network-wired"></i> PCAP</span>
+                            <span class="project-badge"><i class="fas fa-file-excel"></i> Excel Integration</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements">
+            <div class="container">
+                <h2>Achievements</h2>
+                <div class="achievement-cards">
+                    <article class="achievement-card">
+                        <h3>Competitive Programming</h3>
+                        <ul>
+                            <li>3-star rated (1600) on CodeChef (profile: codex77)</li>
+                            <li>Intermediate (1400) on Codeforces (profile: codex77)</li>
+                            <li>Ranked in IMSC Chennai Computing Algorithms Quiz</li>
+                        </ul>
+                    </article>
+                    <article class="achievement-card">
+                        <h3>Academic Leadership</h3>
+                        <ul>
+                            <li>Teaching Assistant for Theory of Computation, Discrete Structure, and DSA</li>
+                            <li>Convener of Web & Coding Club</li>
+                            <li>Mentored 4 freshmen in DS algorithms implementation</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses">
+            <div class="container">
+                <h2>Relevant Coursework</h2>
+                <div class="courses-grid">
+                    <article class="course-category">
+                        <h3>Core Computer Science</h3>
+                        <ul>
+                            <li>Data Structures & Algorithms</li>
+                            <li>Advanced Algorithms</li>
+                            <li>Randomized Algorithms</li>
+                            <li>Operating Systems</li>
+                        </ul>
+                    </article>
+                    <article class="course-category">
+                        <h3>Mathematics</h3>
+                        <ul>
+                            <li>Linear Algebra</li>
+                            <li>Discrete Mathematics</li>
+                            <li>Probability for CS</li>
+                        </ul>
+                    </article>
+                    <article class="course-category">
+                        <h3>Advanced Topics</h3>
+                        <ul>
+                            <li>Machine Learning</li>
+                            <li>Computer Systems Security</li>
+                            <li>Principles of Database Systems</li>
+                            <li>Digital Electronics</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teaching Assistant Section -->
+        <section id="teaching">
+            <div class="container">
+                <h2>Teaching Experience</h2>
+                <div class="teaching-cards">
+                    <article class="teaching-card">
+                        <div class="card-header">
+                            <h3>CS19001: Programming and Data Structures Lab</h3>
+                            <h4>Teaching Assistant</h4>
+                            <span class="duration">Autumn 2024</span>
+                        </div>
+                        <div class="course-details">
+                            <p class="instructor">Under Prof. Partha Pratim Chakrabarti</p>
+                            <ul>
+                                <li>Assisted in conducting laboratory sessions for undergraduate students</li>
+                                <li>Helped students understand fundamental programming concepts and data structures</li>
+                                <li>Evaluated assignments and provided constructive feedback</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="teaching-card">
+                        <div class="card-header">
+                            <h3>CS19001: Programming and Data Structures Lab</h3>
+                            <h4>Teaching Assistant</h4>
+                            <span class="duration">Spring 2025</span>
+                        </div>
+                        <div class="course-details">
+                            <p class="instructor">Under Prof. Shamik Sural and Prof. Soumya Kanti Ghosh</p>
+                            <ul>
+                                <li>Mentored students in programming concepts and problem-solving techniques</li>
+                                <li>Conducted doubt-clearing sessions and code reviews</li>
+                                <li>Assisted in lab assessment and grading</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="teaching-card">
+                        <div class="card-header">
+                            <h3>NPTEL: Blockchain and its Applications</h3>
+                            <h4>Teaching Assistant</h4>
+                            <span class="duration">Autumn 2025</span>
+                        </div>
+                        <div class="course-details">
+                            <p class="instructor">Under Prof. Sandip Chakraborty and Prof. Shamik Sural</p>
+                            <ul>
+                                <li>Assisted in developing course materials and assignments</li>
+                                <li>Provided support for blockchain implementation exercises</li>
+                                <li>Helped students understand advanced blockchain concepts and applications</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Shailesh Kumar Sharma. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="animation.js"></script>
+</body>
+</html>
