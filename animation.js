@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const icon = themeToggle.querySelector('i');
+    const savedTheme = localStorage.getItem('theme') || 'light'; // Set light as default
+
+    // Apply theme
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    icon.className = savedTheme === 'light' ? 'fas fa-sun' : 'fas fa-moon';
+
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        icon.className = newTheme === 'light' ? 'fas fa-sun' : 'fas fa-moon';
+    });
+
     // Navigation toggle functionality
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
@@ -62,6 +80,24 @@ document.addEventListener('DOMContentLoaded', function() {
             
             window.addEventListener('resize', () => this.resizeCanvas());
             window.addEventListener('mousemove', (e) => this.handleMouseMove(e));
+
+            this.isDarkMode = !document.documentElement.getAttribute('data-theme') || 
+                              document.documentElement.getAttribute('data-theme') === 'dark';
+            
+            // Listen for theme changes
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (mutation.attributeName === 'data-theme') {
+                        this.isDarkMode = !document.documentElement.getAttribute('data-theme') || 
+                                         document.documentElement.getAttribute('data-theme') === 'dark';
+                    }
+                });
+            });
+            
+            observer.observe(document.documentElement, {
+                attributes: true,
+                attributeFilter: ['data-theme']
+            });
         }
 
         resizeCanvas() {
@@ -257,21 +293,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.ctx.beginPath();
                 this.ctx.moveTo(node.x, node.y);
                 this.ctx.lineTo(target.x, target.y);
-                this.ctx.strokeStyle = 'rgba(0, 255, 136, 0.2)';
+                this.ctx.strokeStyle = this.isDarkMode ? 'rgba(0, 255, 136, 0.2)' : 'rgba(0, 134, 71, 0.2)';
                 this.ctx.stroke();
             });
 
             // Draw node
             this.ctx.beginPath();
             this.ctx.arc(node.x, node.y, 4, 0, Math.PI * 2);
-            this.ctx.fillStyle = '#00ff88';
+            this.ctx.fillStyle = this.isDarkMode ? '#00ff88' : '#008647';
             this.ctx.fill();
 
             // Draw pulse effect
             if (node.pulseRadius > 0) {
                 this.ctx.beginPath();
                 this.ctx.arc(node.x, node.y, node.pulseRadius, 0, Math.PI * 2);
-                this.ctx.strokeStyle = `rgba(0, 255, 136, ${node.pulseOpacity})`;
+                this.ctx.strokeStyle = this.isDarkMode ? 
+                    `rgba(0, 255, 136, ${node.pulseOpacity})` : 
+                    `rgba(0, 134, 71, ${node.pulseOpacity})`;
                 this.ctx.stroke();
 
                 node.pulseRadius += 1;
@@ -284,7 +322,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             // Draw hash
-            this.ctx.fillStyle = 'rgba(0, 255, 136, 0.5)';
+            this.ctx.fillStyle = this.isDarkMode ? 
+                'rgba(0, 255, 136, 0.5)' : 
+                'rgba(0, 134, 71, 0.5)';
             this.ctx.font = '10px monospace';
             this.ctx.fillText(node.hash, node.x + 10, node.y + 10);
 
@@ -326,7 +366,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.canvas.width / 2, this.canvas.height / 2, 0,
                 this.canvas.width / 2, this.canvas.height / 2, Math.max(this.canvas.width, this.canvas.height) / 2
             );
-            gradient.addColorStop(0, 'rgba(0, 255, 136, 0.05)');
+            gradient.addColorStop(0, this.isDarkMode ? 
+                'rgba(0, 255, 136, 0.05)' : 
+                'rgba(0, 134, 71, 0.05)');
             gradient.addColorStop(1, 'transparent');
             this.ctx.fillStyle = gradient;
             this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
